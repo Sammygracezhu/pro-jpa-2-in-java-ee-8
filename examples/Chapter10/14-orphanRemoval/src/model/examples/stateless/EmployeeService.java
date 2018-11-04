@@ -32,6 +32,7 @@ public class EmployeeService {
     public void removeEmployeeEvaluation(int empId, int evalId) {
         Employee emp = em.find(Employee.class, empId);
         Evaluation eval = em.find(Evaluation.class, evalId);
+        em.remove(emp);
         emp.getEvals().remove(eval);
     }
 
