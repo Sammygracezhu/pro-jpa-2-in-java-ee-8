@@ -22,7 +22,7 @@ public class EmployeeServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List emps = bean.findAll();
         request.setAttribute("employees", emps);
-        getServletContext().getRequestDispatcher("/listEmployees.jsp")
+        getServletContext().getRequestDispatcher("/list/listEmployees.jsp")
                            .forward(request, response);
     }
     
